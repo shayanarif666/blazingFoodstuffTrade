@@ -1,0 +1,575 @@
+.auto-container {
+    max-width: 91vw;
+    width: 100%;
+    margin-left: 8vw;
+}
+
+/* #######################
+Color Combination
+####################### */
+:root {
+    --txt-golden: #c0a260;
+    --txt-dark: #222;
+    --txt-white: #fff;
+    --txt-light: #aaa;
+    --txt-gold-hover: #c1963a;
+    --txt-red: rgb(194, 0, 0);
+}
+
+/* ######################
+Utilities
+####################### */
+.aside-icon-width {
+    width: 50px;
+    height: 50px;
+}
+
+.bg-cover {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+/* #########################
+Buttons Styling
+######################### */
+.btn-main {
+    background-color: var(--txt-red);
+    color: var(--txt-white);
+    border: none !important;
+    padding: .4rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* #########################
+Logo Styling
+######################### */
+.logo {
+    width: 300px;
+    height: auto;
+}
+.mob-logo {
+    width: 50px;
+    height: auto;
+    margin: 0 1rem;
+    display: none;
+}
+/* ##########################
+Aside Bar Styling
+########################## */
+#aside {
+    max-width: 8vw;
+    width: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    background-color: var(--txt-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    z-index: 9 !important;
+}
+
+#aside .aside-menu {
+    text-align: center;
+}
+
+.aside-menu .aside-menu-icon {
+    color: #fff;
+    background-color: var(--txt-golden);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: .6rem;
+    cursor: pointer;
+}
+
+.aside-categories .category-menu {
+    text-align: center;
+    padding: 1rem;
+}
+
+.aside-categories .category-menu:hover {
+    background-color: rgb(192, 162, 96, .2);
+    cursor: pointer;
+}
+
+.category-menu img {
+    filter: invert(45%) sepia(30%) saturate(497%) hue-rotate(3deg) brightness(93%) contrast(93%);
+}
+
+.category-menu h6 {
+    color: var(--txt-golden);
+    text-transform: uppercase;
+    margin-top: .8rem;
+    font-size: .85rem;
+}
+
+.aside-social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.aside-social-icons i {
+    color: var(--txt-white);
+    background-color: var(--txt-golden);
+    font-size: 1.8rem;
+    margin: .5rem 0;
+    border: 1px solid var(--txt-golden);
+    border-radius: 50%;
+    padding: .4rem;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.aside-social-icons i:hover {
+    background-color: var(--txt-gold-hover);
+}
+
+.aside-tab {
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    width: 800px;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); 
+    z-index: 0;
+    padding: 3rem;
+    border-bottom-right-radius: 30px;
+    transition: all .4s ease-in-out;
+}
+.close-tab i {
+    border: 1px solid var(--txt-gold-hover);
+    font-size: 2.2rem;
+    padding: .2rem;
+    border-radius: 50%;
+    color: var(--txt-gold-hover);
+    cursor: pointer;
+}
+.aside-tab-content h2 {
+    color: var(--txt-gold-hover);
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.aside-tab-content h2::after {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: var(--txt-gold-hover);
+    margin-top: .4rem;
+}
+.aside-tab-content .links {
+    margin: 1rem 0;
+}
+.aside-tab-content .links a {
+    color: var(--txt-dark);
+    display: block;
+    text-decoration: none;
+    margin: .5rem 0;
+    font-size: .8rem;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all .2s ease-in-out;
+}
+.aside-tab-content .links a:hover {
+    color: var(--txt-gold-hover);
+}
+
+/* ##########################
+Navbar Styling
+########################## */
+#navbar {
+    background-color: var(--txt-dark);
+    padding: .5rem 1.5rem .5rem 0;
+    position: relative;
+}
+
+.search-box input {
+    background: transparent;
+    border-color: var(--txt-golden);
+    border-top: none !important;
+    border-bottom: 1px solid var(--txt-light);
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0% !important;
+    width: 300px;
+}
+
+.search-box input:focus {
+    box-shadow: none !important;
+    background: transparent !important;
+    color: var(--txt-white) !important;
+    border-color: var(--txt-light);
+}
+
+.search-box input::placeholder {
+    color: var(--txt-light);
+}
+
+.mobile-menu i {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: var(--txt-light);
+    display: none;
+    cursor: pointer;
+}
+
+/* ##########################
+Navbar Aside Styling
+########################## */
+.nav-aside-tab {
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); 
+    z-index: 0;
+    padding: 1rem 2rem;
+    transition: all .4s ease-in-out;
+}
+.nav-aside-tab .close-tab i {
+    border: 1px solid var(--txt-gold-hover);
+    font-size: 2.2rem;
+    padding: .2rem;
+    border-radius: 50%;
+    color: var(--txt-gold-hover);
+    cursor: pointer;
+}
+.nav-aside-tab .search-box input {
+    border: 1px solid #999 !important;
+    border-radius: 30px !important;
+    padding: .7rem 1rem !important;
+    color: #999 !important;
+} 
+.nav-aside-tab .search-box input::placeholder {
+    color: #999;
+}
+/* ##########################
+Showcase Section Styling
+########################## */
+#showcase {
+    padding: none;
+    width: 100%;
+}
+
+#showcase .item {
+    height: 800px;
+    width: 100%;
+}
+
+#showcase .item-one {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(1\).jpg);
+}
+
+#showcase .item-two {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(2\).jpg);
+}
+
+#showcase .item-three {
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(3\).jpg);
+}
+
+.showcase-content .showcase-info {
+    height: 100%;
+    padding: 4rem 2rem;
+}
+
+.showcase-info h1 {
+    color: var(--txt-red);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.showcase-info h1 span {
+    color: var(--txt-white);
+    font-size: 3.5rem;
+}
+
+#showcase .owl-carousel {
+    position: relative;
+}
+
+#showcase .owl-theme .owl-dots {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 4%;
+    left: 2%;
+}
+
+#showcase .owl-theme .owl-dots .owl-dot span {
+    background-color: var(--txt-white);
+    width: 18px;
+    height: 18px;
+}
+
+#showcase .owl-theme .owl-dots .owl-dot span:hover {
+    background-color: #eee !important;
+    color: transparent !important;
+}
+
+#showcase .owl-theme .owl-dots .owl-dot.active span {
+    background-color: #ddd !important;
+}
+
+/* ##########################
+Categories Section Styling
+########################## */
+#categories {
+    background-color: lightgoldenrodyellow;
+    height: 100%;
+    padding: 5rem 0 2rem;
+}
+
+#categories .chips-category,
+#categories .corn-curls-category,
+#categories .snack-category,
+#categories .drink-category {
+    height: 100%;
+    padding: 2rem 3rem;
+}
+
+#categories .chips-category {
+    background-color: #ff7d04 !important;
+    background: url(../images/Banner/chips-bg.png);
+}
+
+#categories .corn-curls-category {
+    background-color: #ffca28 !important;
+    background: url(../images/Banner/corn-curls-bg.png);
+}
+
+#categories .snack-category {
+    background-color: #d1db39 !important;
+    background: url(../images/Banner/snacks-bg.png);
+}
+
+#categories .drink-category {
+    background-color: #fd2a32 !important;
+    background: url(../images/Banner/soft-drink-bg.png);
+}
+
+.chips-category h2,
+.corn-curls-category h2,
+.snack-category h2,
+.drink-category h2 {
+    color: var(--txt-white);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.chips-category .item,
+.corn-curls-category .item,
+.snack-category .item,
+.drink-category .item {
+    position: relative;
+}
+
+.chips-category .item img,
+.corn-curls-category .item img,
+.snack-category .item img,
+.drink-category .item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    padding: 0 1rem;
+}
+
+.chips-category .showcase-content,
+.corn-curls-category .showcase-content,
+.snack-category .showcase-content,
+.drink-category .showcase-content {
+    margin: 1rem 1rem 2rem !important;
+}
+
+.chips-category .showcase-content h5,
+.corn-curls-category .showcase-content h5,
+.snack-category .showcase-content,
+.drink-category .showcase-content {
+    margin: 0%;
+}
+
+.chips-category .showcase-content button,
+.corn-curls-category .showcase-content button,
+.snack-category .showcase-content button,
+.drink-category .showcase-content button {
+    background-color: var(--txt-golden);
+    font-size: .7rem;
+    transition: all .4s ease-in-out;
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    transform: translate(0%, 0%);
+    padding: .4rem .7rem;
+}
+
+.showcase-content button:hover,
+.corn-curls-category button:hover,
+.snack-category button:hover,
+.drink-category button:hover {
+    background-color: var(--txt-gold-hover);
+}
+
+#categories .owl-theme .owl-dots .owl-dot span {
+    background-color: var(--txt-white);
+    width: 12px;
+    height: 12px;
+}
+
+#categories .owl-theme .owl-dots .owl-dot span:hover {
+    background-color: #eee !important;
+    color: transparent !important;
+}
+
+#categories .owl-theme .owl-dots .owl-dot.active span {
+    background-color: #f9bb81 !important;
+}
+
+#categories .owl-theme .owl-dots .owl-dot:hover {
+    background: transparent !important;
+}
+
+
+
+/* ##########################
+Footer Styling
+########################## */
+#footer {
+    background-color: lightgoldenrodyellow;
+    height: 100%;
+    padding: 5rem 0 2rem;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h1 {
+    color: #e52614;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-content .social-icons {
+    color: #e52614;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.footer-content .social-icons i {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.footer-content .links a:hover {
+    color: #e52614 !important;
+}
+.footer-content .brands img {
+    width: 250px;
+    height: 100px;
+}
+
+
+/* #########################
+Responsive Media 
+########################## */
+@media (max-width: 1200px) {
+    .auto-container {
+        max-width: 88vw !important;
+        margin-left: 10vw !important;
+    }
+
+    /* Aside Bar Styling */
+    #aside {
+        max-width: 10vw;
+    }
+
+    /* Showcase */
+    #showcase {
+        padding-left: 0vw;
+    }
+}
+
+@media (max-width: 991px) {
+    .auto-container {
+        max-width: 100vw !important;
+        margin: 0vw !important;
+    }
+
+    /* Navbar */
+    #navbar {
+        z-index: 99;
+    }
+    .mobile-menu i {
+        display: block;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar Section */
+    .nav-search-box input {
+        display: none;
+    }
+
+    /* Categories Section */
+    .chips-category .showcase-content button,
+    .corn-curls-category .showcase-content button {
+        position: absolute;
+        bottom: 12%;
+        right: 8%;
+        transform: translate(10%, -20%);
+    }
+
+    #categories .chips-category,
+    #categories .corn-curls-category,
+    #categories .snack-category,
+    #categories .drink-category {
+        padding: 2rem 1rem;
+    }
+
+    .chips-category .item img,
+    .corn-curls-category .item img {
+        padding: 0rem;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Navbar Styling */
+    .logo {
+        display: none;
+    }
+    .mob-logo {
+        display: block;
+    }
+    .nav-aside-tab {
+        height: 850px;
+    }
+    /* Footer */
+    .footer-content .links {
+        font-size: .8rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer-content .links a {
+        padding: .5rem;
+    }
+    .footer-content .brands img {
+        width: 100%;
+        height: auto;
+    }
+}
