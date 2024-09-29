@@ -144,6 +144,8 @@ Aside Bar Styling
     padding: 3rem;
     border-bottom-right-radius: 30px;
     transition: all .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 .close-tab i {
     border: 1px solid var(--txt-gold-hover);
@@ -236,6 +238,8 @@ Navbar Aside Styling
     z-index: 0;
     padding: 1rem 2rem;
     transition: all .4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 }
 .nav-aside-tab .close-tab i {
     border: 1px solid var(--txt-gold-hover);

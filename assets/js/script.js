@@ -69,21 +69,15 @@ const handleSliderCards = () => {
     })
 }
 
-// Function To Display Aside Menu Bar
-const displayAsideMenu = (asideTab) => {
-    asideTab.style.opacity = 1;
-    asideTab.style.visibility = "visible";
-}
+// Function To Toggle Aside Menu Tab
+const toggleMenu = (menuElement, shouldShow) => {
+    menuElement.style.opacity = shouldShow ? 1 : 0;
+    menuElement.style.visibility = shouldShow ? "visible" : "hidden";
+};
 
-const hideAsideMenu = (asideTab) => {
-    asideTab.style.opacity = 0;
-    asideTab.style.visibility = "hidden";
-}
-
-// Events Handling
-asideMenuTab.addEventListener("click", () => { displayAsideMenu(asideTab) });
-navAsideMenuTab.addEventListener("click", () => { displayAsideMenu(navAsideTab) });
-closeTab.addEventListener("click", () => { hideAsideMenu(asideTab) });
-navCloseTab.addEventListener("click", () => { hideAsideMenu(navAsideTab) });
+asideMenuTab.addEventListener("click", () => toggleMenu(asideTab, true));
+navAsideMenuTab.addEventListener("click", () => toggleMenu(navAsideTab, true));
+closeTab.addEventListener("click", () => toggleMenu(asideTab, false));
+navCloseTab.addEventListener("click", () => toggleMenu(navAsideTab, false));
 
 window.addEventListener("load", handleSliderCards);
