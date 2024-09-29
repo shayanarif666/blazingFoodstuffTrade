@@ -50,12 +50,14 @@ Logo Styling
     width: 300px;
     height: auto;
 }
+
 .mob-logo {
     width: 50px;
     height: auto;
     margin: 0 1rem;
     display: none;
 }
+
 /* ##########################
 Aside Bar Styling
 ########################## */
@@ -73,6 +75,7 @@ Aside Bar Styling
     justify-content: space-between;
     padding: 2rem 0;
     z-index: 9 !important;
+    transition: all .4s ease-in-out;
 }
 
 #aside .aside-menu {
@@ -90,7 +93,7 @@ Aside Bar Styling
 
 .aside-categories .category-menu {
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 2.5rem;
 }
 
 .aside-categories .category-menu:hover {
@@ -139,7 +142,7 @@ Aside Bar Styling
     width: 800px;
     height: 700px;
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     z-index: 0;
     padding: 3rem;
     border-bottom-right-radius: 30px;
@@ -147,6 +150,7 @@ Aside Bar Styling
     opacity: 0;
     visibility: hidden;
 }
+
 .close-tab i {
     border: 1px solid var(--txt-gold-hover);
     font-size: 2.2rem;
@@ -155,11 +159,13 @@ Aside Bar Styling
     color: var(--txt-gold-hover);
     cursor: pointer;
 }
+
 .aside-tab-content h2 {
     color: var(--txt-gold-hover);
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 .aside-tab-content h2::after {
     display: block;
     content: "";
@@ -168,9 +174,11 @@ Aside Bar Styling
     background-color: var(--txt-gold-hover);
     margin-top: .4rem;
 }
+
 .aside-tab-content .links {
     margin: 1rem 0;
 }
+
 .aside-tab-content .links a {
     color: var(--txt-dark);
     display: block;
@@ -181,6 +189,7 @@ Aside Bar Styling
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all .2s ease-in-out;
 }
+
 .aside-tab-content .links a:hover {
     color: var(--txt-gold-hover);
 }
@@ -234,13 +243,14 @@ Navbar Aside Styling
     width: 100%;
     height: 700px;
     background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     z-index: 0;
-    padding: 1rem 2rem;
+    padding: 1rem;
     transition: all .4s ease-in-out;
     opacity: 0;
     visibility: hidden;
 }
+
 .nav-aside-tab .close-tab i {
     border: 1px solid var(--txt-gold-hover);
     font-size: 2.2rem;
@@ -249,15 +259,18 @@ Navbar Aside Styling
     color: var(--txt-gold-hover);
     cursor: pointer;
 }
+
 .nav-aside-tab .search-box input {
     border: 1px solid #999 !important;
     border-radius: 30px !important;
     padding: .7rem 1rem !important;
     color: #999 !important;
-} 
+}
+
 .nav-aside-tab .search-box input::placeholder {
     color: #999;
 }
+
 /* ##########################
 Showcase Section Styling
 ########################## */
@@ -475,9 +488,11 @@ Footer Styling
     margin: 0 1rem;
     cursor: pointer;
 }
+
 .footer-content .links a:hover {
     color: #e52614 !important;
 }
+
 .footer-content .brands img {
     width: 250px;
     height: 100px;
@@ -487,15 +502,32 @@ Footer Styling
 /* #########################
 Responsive Media 
 ########################## */
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
     .auto-container {
-        max-width: 88vw !important;
-        margin-left: 10vw !important;
+        max-width: 87vw !important;
+        margin-left: 12vw !important;
     }
 
     /* Aside Bar Styling */
     #aside {
-        max-width: 10vw;
+        max-width: 12vw;
+    }
+
+    /* Showcase */
+    #showcase {
+        padding-left: 0vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    .auto-container {
+        max-width: 84vw !important;
+        margin-left: 14.5vw !important;
+    }
+
+    /* Aside Bar Styling */
+    #aside {
+        max-width: 15vw;
     }
 
     /* Showcase */
@@ -510,10 +542,21 @@ Responsive Media
         margin: 0vw !important;
     }
 
+    /* Aside Bar */
+    #aside {
+        position: fixed;
+        left: -50%;
+        top: 0%;
+        z-index: 999 !important;
+        padding: .5rem 0;
+        min-width: 15vw;
+    }
+
     /* Navbar */
     #navbar {
         z-index: 99;
     }
+
     .mobile-menu i {
         display: block;
     }
@@ -524,6 +567,16 @@ Responsive Media
 }
 
 @media (max-width: 768px) {
+
+    /* Aside Bar */
+    #aside {
+        position: fixed;
+        left: -50%;
+        top: 0%;
+        z-index: 999 !important;
+        padding: .5rem 0;
+        min-width: 20vw;
+    }
 
     /* Navbar Section */
     .nav-search-box input {
@@ -553,27 +606,58 @@ Responsive Media
 }
 
 @media (max-width: 576px) {
+
+    /* Aside Bar */
+    #aside {
+        position: fixed;
+        left: -50%;
+        top: 0%;
+        z-index: 999 !important;
+        padding: .5rem 0;
+        min-width: 25vw;
+    }
+
     /* Navbar Styling */
     .logo {
         display: none;
     }
+
     .mob-logo {
         display: block;
     }
+
     .nav-aside-tab {
         height: 850px;
     }
+
     /* Footer */
     .footer-content .links {
         font-size: .8rem;
         display: flex;
         flex-wrap: wrap;
     }
+
     .footer-content .links a {
         padding: .5rem;
     }
+
     .footer-content .brands img {
         width: 100%;
         height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Aside Bar */
+    #aside {
+        position: fixed;
+        left: -50%;
+        top: 0%;
+        z-index: 999 !important;
+        padding: .5rem 0;
+        min-width: 35vw;
+        height: 100%;
+        overflow: hidden;
     }
 }
