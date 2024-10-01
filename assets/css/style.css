@@ -91,6 +91,9 @@ Aside Bar Styling
     cursor: pointer;
 }
 
+.aside-categories a {
+    text-decoration: none !important;
+}
 .aside-categories .category-menu {
     text-align: center;
     padding: 1rem 2.5rem;
@@ -285,15 +288,15 @@ Showcase Section Styling
 }
 
 #showcase .item-one {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(1\).jpg);
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(1\).gif);
 }
 
 #showcase .item-two {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(2\).jpg);
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(3\).gif);
 }
 
 #showcase .item-three {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(3\).jpg);
+    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(2\).gif);
 }
 
 .showcase-content .showcase-info {
