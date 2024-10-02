@@ -296,43 +296,28 @@ Banner Section
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* #########################
-Products Section
+/* ##########################
+Product Details Styling
 ########################## */
-#products {
-    padding: 3rem 0;
+#productDetails {
+    padding: 4rem 0;
 }
-#products .product-content {
-    height: 100%;
-    position: relative;
-    padding: 0rem !important;
-}
-.product-content img {
-    border-radius: 30px;
-    width: 100% !important;
-    height: 100%;
-}
-.product-content .product-info {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
+.product-img img {
     width: 100%;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background-color: var(--txt-golden);
-    padding: .5rem 1rem;
 }
-.bd-txt {
-    border: 1px solid var(--txt-white);
-    border-radius: 15px;
-    padding: .4rem 1rem;
+.accordion {
+    --bs-accordion-border-color: none !important;
 }
-.product-info h5 {
-    color: var(--txt-white);
+.accordion-item .accordion-header {
+    border-bottom: 2px solid #e52614;
 }
-.product-info a {
-    font-size: .7rem;
-    padding: .4rem 1rem;
+.accordion-header button {
+    box-shadow: none !important;
+    background: transparent !important;
+}
+.accordion-body ol {
+    list-style: none !important;
+    padding: 0rem !important;
 }
 
 /* ##########################
@@ -452,7 +437,6 @@ Responsive Media
 }
 
 @media (max-width: 576px) {
-
     /* Aside Bar */
     #aside {
         position: fixed;

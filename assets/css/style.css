@@ -421,10 +421,10 @@ Categories Section Styling
     margin: 0%;
 }
 
-.chips-category .showcase-content button,
-.corn-curls-category .showcase-content button,
-.snack-category .showcase-content button,
-.drink-category .showcase-content button {
+.chips-category .showcase-content a,
+.corn-curls-category .showcase-content a,
+.snack-category .showcase-content a,
+.drink-category .showcase-content a {
     background-color: var(--txt-golden);
     font-size: .7rem;
     transition: all .4s ease-in-out;
@@ -435,10 +435,10 @@ Categories Section Styling
     padding: .4rem .7rem;
 }
 
-.showcase-content button:hover,
-.corn-curls-category button:hover,
-.snack-category button:hover,
-.drink-category button:hover {
+.showcase-content a:hover,
+.corn-curls-category a:hover,
+.snack-category a:hover,
+.drink-category a:hover {
     background-color: var(--txt-gold-hover);
 }
 

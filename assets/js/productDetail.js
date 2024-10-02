@@ -1,4 +1,4 @@
-// Fake Data
+// Products Data
 const products = [
     {
         id: 1,
@@ -108,41 +108,66 @@ const products = [
         category: "snacks",
         brand: "Sara Snack"
     }
-]
+];
 
-const productElem = document.querySelector("#products .row");
+// Get Params
+const id = window.location.search.slice(4);
 
-// Function To Display Category Wise Products
-const handleProducts = (products) => {
-    const filteredProducts = products.filter((product) => product.category === categoryURL.replace("-", " "));
-    if (filteredProducts.length > 0) {
-        filteredProducts.map((product) => {
-            productElem.innerHTML += `
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="product-content">
-                        <img src="${product.thumbnail}" alt="">
+// Variables
+const productDetails = document.querySelector("#productDetails .row");
+
+// Function To Handle Product Details
+const handleProductDetails = (id) => {
+    const findProduct = products.find((product) => product.id === parseInt(id));
+    productDetails.innerHTML = `
+       <div class="col-lg-6">
+            <div class="product-img">
+                <img src="${findProduct.thumbnail}"
+                    alt="">
+            </div>
+        </div>
+        <div class="col-lg-6">
                         <div class="product-info">
-                            <div class="bd-txt">
-                                <h5>${product.title}</h5>
-                                <div class="text-end">
-                                    <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">View Product</a>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
+                                            Description
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">${findProduct.description}</div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item mt-4">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
+                                            Package Specification
+                                        </button>
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionFlushExample">
+                                        <div class="accordion-body">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <ol>
+                                                        ${findProduct.specification.map((specification, idx) => (
+                                                            `<li key="${idx}" class="p-2">${specification}</li>`
+                                                        )).join("")}
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            `
-        } 
-    )} else {
-        productElem.innerHTML = `
-        <div class="col-12">
-            <img src="./assets/images/Banner/coming soon banner.png" style="width:100%; height: "100%" alt="">
-        </div>
+            </div>
     `
-    }
 }
-
-// Loading Window
-window.addEventListener("load", () => {
-    handleProducts(products);
-});
+handleProductDetails(id);

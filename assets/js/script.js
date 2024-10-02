@@ -116,6 +116,7 @@ $('#showcase .owl-carousel').owlCarousel({
     nav: false,
     autoplay: true,
     smartSpeed: 1000,
+    autoplayTimeout: 7000,
     responsive: {
         0: {
             items: 1
@@ -140,7 +141,7 @@ const handleSliderCards = () => {
             <img src="${product.thumbnail}" alt="">
             <div class="showcase-content">
                 <h5>${product.title}</h5>
-                <button class="btn-main">View Product</button>
+                <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">View Product</a>
             </div>
         `
 
