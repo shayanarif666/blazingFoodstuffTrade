@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -67,28 +68,30 @@
                             <a href="vision.html">Vision</a>
                             <a href="mission.html">Mission</a>
                             <a href="message.html">Chairman's Message</a>
-                            <a href="">Safety Health & Environment Policy</a>
-                            <a href="">Food Safety & Quality Management System</a>
-                            <a href="">Certification</a>
-                            <a href="">Standards</a>
-                            <a href="">ICV</a>
-                            <a href="">Made in Oman</a>
+                            <a href="healthPolicy.html">Safety Health & Environment Policy</a>
+                            <a href="foodPolicy.html">Food Safety & Quality Management System</a>
+                            <a href="certification.html">Certification</a>
+                            <a href="standards.html">Standards</a>
+                            <a href="icv.html">ICV</a>
+                            <a href="madeInOman.html">Made in Oman</a>
                         </div>
 
                         <h2 class="mt-4">Our Availibity</h2>
                         <div class="links">
                             <a href="contact.html">Contact Us</a>
-                            <a href="">Buisness Inquiry</a>
+                            <a href="contact.html">Buisness Inquiry</a>
                         </div>
                     </div>
                     <div class="col-6">
                         <h2>Our Industries</h2>
                         <div class="links">
-                            <a href="">Blazing Foodstuff Trading LLC</a>
+                            <a href="industries.html?category=food">Blazing Foodstuff Trading Food Industry</a>
+                            <a href="industries.html?category=soft_drinks">Blazing Foodstuff Trading Soft Drinks Industry</a>
+                            <a href="industries.html?category=">Blazing Foodstuff Trading Paper Industry</a>
                         </div>
                         <h2 class="mt-4">Customer Corners</h2>
                         <div class="links">
-                            <a href="">Recipes</a>
+                            <a href="recipes.html">Recipes</a>
                         </div>
                         <div class="search-box d-md-none d-block">
                             <input type="search" class="form-control" placeholder="Search">
@@ -178,7 +181,7 @@
                                     The <span>Finest</span> Chips <br> in The <span>Middle East</span> <br> since
                                     <span>1983</span>
                                 </h1>
-                                <button class="btn-main mt-2">Know More</button>
+                                <a href="productDetail.html?id=1" class="btn-main mt-2 text-decoration-none">Know More</a>
                             </div>
                         </div>
                     </div>
@@ -190,7 +193,7 @@
                                 <h1> <span>Pofak</span> Oman <br> Crispy <span>Corn Curls</span> <br> <span>Since</span>
                                     1981
                                 </h1>
-                                <button class="btn-main mt-2">Know More</button>
+                                <a href="productDetail.html?id=8" class="btn-main mt-2 text-decoration-none">Know More</a>
                             </div>
                         </div>
                     </div>
@@ -203,7 +206,7 @@
                                     <h1><span>Shami</span> Mixed <br> Fruit <span>Drink</span> <br> <span>Since</span>
                                         1984
                                     </h1>
-                                    <button class="btn-main mt-2">Know More</button>
+                                    <a href="productDetail.html?id=10" class="btn-main mt-2 text-decoration-none">Know More</a>
                                 </div>
                             </div>
                         </div>
@@ -219,8 +222,8 @@
             <div class="container">
 
                 <!-- Chips Category Start -->
-                <div class="chips-category bg-cover">
-                    <h2 class="categTitle">Chips</h2>
+                <div class="chips-category bg-cover" >
+                    <h2 class="categTitle" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Chips</h2>
 
                     <div class="owl-carousel owl-theme text-white" id="chips-items">
 
@@ -232,7 +235,7 @@
 
                 <!-- Corn Curls Category Start -->
                 <div class="corn-curls-category mt-5 bg-cover">
-                    <h2 class="categTitle">Corn Curls</h2>
+                    <h2 class="categTitle" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Corn Curls</h2>
 
                     <div class="owl-carousel owl-theme text-white" id="corns-items">
 
@@ -243,7 +246,7 @@
 
                 <!-- Snack Category Start -->
                 <div class="snack-category mt-5 bg-cover">
-                    <h2 class="categTitle">Snacks</h2>
+                    <h2 class="categTitle" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Snacks</h2>
 
                     <div class="owl-carousel owl-theme text-white" id="snacks-items">
 
@@ -254,7 +257,7 @@
 
                 <!-- Drinks Category Start -->
                 <div class="drink-category mt-5 bg-cover">
-                    <h2 class="categTitle">Soft Drinks</h2>
+                    <h2 class="categTitle" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">Soft Drinks</h2>
 
                     <div class="owl-carousel owl-theme text-white" id="soft-drinks-items">
 
@@ -283,8 +286,8 @@
                     <hr class="text-muted my-4">
                     <div class="links d-flex align-items-center justify-content-center">
                         <a href="about.html" class="text-muted mx-3 text-decoration-none">About Us</a>
-                        <a href="" class="text-muted mx-3 text-decoration-none">Products</a>
-                        <a href="" class="text-muted mx-3 text-decoration-none">Awards</a>
+                        <a href="productCategory.html?category=chips" class="text-muted mx-3 text-decoration-none">Products</a>
+                        <a href="certification.html" class="text-muted mx-3 text-decoration-none">Awards</a>
                         <a href="contact.html" class="text-muted mx-3 text-decoration-none">Contact Us</a>
                     </div>
                     <small class="text-muted mt-3 mb-4 d-inline-block">© 2024 Blazing Foodstuff Trading.</small>
@@ -313,15 +316,19 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
     <!-- Custom Js -->
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/data.js"></script>
     <script src="./assets/js/viewCategories.js"></script>
     <script src="./assets/js/aside.js"></script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 

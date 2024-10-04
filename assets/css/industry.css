@@ -1,7 +1,7 @@
 .auto-container {
-    max-width: 91vw;
+    max-width: 92vw;
     width: 100%;
-    margin-left: 8vw;
+    margin-left: 7vw;
 }
 
 /* #######################
@@ -14,6 +14,7 @@ Color Combination
     --txt-light: #aaa;
     --txt-gold-hover: #c1963a;
     --txt-red: rgb(194, 0, 0);
+    --hover-red: rgb(167, 0, 0);
 }
 
 /* ######################
@@ -23,7 +24,9 @@ Utilities
     width: 50px;
     height: 50px;
 }
-
+.active-aside-icon {
+    background-color: rgb(192, 162, 96, .2) !important;
+}
 .bg-cover {
     background-position: center !important;
     background-repeat: no-repeat !important;
@@ -43,7 +46,7 @@ Buttons Styling
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .btn-main:hover {
-    background-color: #ff1500 !important;
+    background-color: var(--hover-red);
 }
 /* #########################
 Logo Styling
@@ -204,7 +207,7 @@ Navbar Styling
 ########################## */
 #navbar {
     background-color: var(--txt-dark);
-    padding: .5rem 1.5rem .5rem 0;
+    padding: .5rem 1.5rem .5rem 1rem;
     position: relative;
 }
 
@@ -276,196 +279,66 @@ Navbar Aside Styling
     color: #999;
 }
 
-/* ##########################
-Showcase Section Styling
+/* #########################
+Banner Section
 ########################## */
-#showcase {
-    padding: none;
-    width: 100%;
+#banner {
+    background: url(../images/Banner/_banner\ \(1\).jpg);
+    height: 225px;
+    padding: 2rem;
+}
+.banner-content {
+    text-align: center;
+}
+.banner-content h2 {
+    font-size: 4rem;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#showcase .item {
-    height: 800px;
-    width: 100%;
-}
-
-#showcase .item-one {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(1\).gif);
-}
-
-#showcase .item-two {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(3\).gif);
-}
-
-#showcase .item-three {
-    background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url(../images/Banner/banner\ \(2\).gif);
-}
-
-.showcase-content .showcase-info {
-    height: 100%;
-    padding: 4rem 2rem;
-}
-
-.showcase-info h1 {
-    color: var(--txt-red);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bolder;
-}
-
-.showcase-info h1 span {
-    color: var(--txt-white);
-    font-size: 3.5rem;
-}
-
-#showcase .owl-carousel {
-    position: relative;
-}
-
-#showcase .owl-theme .owl-dots {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 4%;
-    left: 2%;
-}
-
-#showcase .owl-theme .owl-dots .owl-dot span {
-    background-color: var(--txt-white);
-    width: 18px;
-    height: 18px;
-}
-
-#showcase .owl-theme .owl-dots .owl-dot span:hover {
-    background-color: #eee !important;
-    color: transparent !important;
-}
-
-#showcase .owl-theme .owl-dots .owl-dot.active span {
-    background-color: #ddd !important;
-}
-
-/* ##########################
-Categories Section Styling
+/* #########################
+Products Section
 ########################## */
-#categories {
+#products {
     background-color: lightgoldenrodyellow;
+}
+#products .container {
+    background-color: #fff;
+    padding: 3rem;
+}
+#products .product-content {
     height: 100%;
-    padding: 5rem 0 2rem;
-}
-
-#categories .chips-category,
-#categories .corn-curls-category,
-#categories .snack-category,
-#categories .drink-category {
-    height: 100%;
-    padding: 2rem 3rem;
-}
-
-#categories .chips-category {
-    background-color: #ff7d04 !important;
-    background: url(../images/Banner/chips-bg.png);
-}
-
-#categories .corn-curls-category {
-    background-color: #ffca28 !important;
-    background: url(../images/Banner/corn-curls-bg.png);
-}
-
-#categories .snack-category {
-    background-color: #d1db39 !important;
-    background: url(../images/Banner/snacks-bg.png);
-}
-
-#categories .drink-category {
-    background-color: #fd2a32 !important;
-    background: url(../images/Banner/soft-drink-bg.png);
-}
-
-.chips-category h2,
-.corn-curls-category h2,
-.snack-category h2,
-.drink-category h2 {
-    color: var(--txt-white);
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3rem;
-    margin-bottom: 3rem;
-}
-
-.chips-category .item,
-.corn-curls-category .item,
-.snack-category .item,
-.drink-category .item {
     position: relative;
-    padding: 0 1rem;
+    padding: 0rem !important;
 }
-
-.chips-category .item img,
-.corn-curls-category .item img,
-.snack-category .item img,
-.drink-category .item img {
-    width: 100%;
+.product-content img {
+    border-radius: 30px;
+    width: 100% !important;
     height: 400px;
     object-fit: cover;
-    padding: 0 0;
-    border-radius: 30px;
 }
-
-.chips-category .showcase-content,
-.corn-curls-category .showcase-content,
-.snack-category .showcase-content,
-.drink-category .showcase-content {
-    margin: 1rem 1rem 2rem !important;
-}
-
-.chips-category .showcase-content h5,
-.corn-curls-category .showcase-content h5,
-.snack-category .showcase-content,
-.drink-category .showcase-content {
-    margin: 0%;
-}
-
-.chips-category .showcase-content a,
-.corn-curls-category .showcase-content a,
-.snack-category .showcase-content a,
-.drink-category .showcase-content a {
-    background-color: var(--txt-golden);
-    font-size: .7rem;
-    transition: all .4s ease-in-out;
+.product-content .product-info {
     position: absolute;
-    bottom: 12%;
-    right: 8%;
-    transform: translate(0%, 0%);
-    padding: .4rem .7rem;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--txt-golden);
+    padding: .5rem 1rem;
 }
-
-.showcase-content a:hover,
-.corn-curls-category a:hover,
-.snack-category a:hover,
-.drink-category a:hover {
-    background-color: var(--txt-gold-hover) !important;
+.bd-txt {
+    border: 1px solid var(--txt-white);
+    border-radius: 15px;
+    padding: .4rem 1rem;
 }
-
-#categories .owl-theme .owl-dots .owl-dot span {
-    background-color: var(--txt-white);
-    width: 12px;
-    height: 12px;
+.product-info h5 {
+    color: var(--txt-white);
 }
-
-#categories .owl-theme .owl-dots .owl-dot span:hover {
-    background-color: #eee !important;
-    color: transparent !important;
+.product-info a {
+    font-size: .7rem;
+    padding: .4rem 1rem;
 }
-
-#categories .owl-theme .owl-dots .owl-dot.active span {
-    background-color: #f9bb81 !important;
-}
-
-#categories .owl-theme .owl-dots .owl-dot:hover {
-    background: transparent !important;
-}
-
-
 
 /* ##########################
 Footer Styling
@@ -506,40 +379,31 @@ Footer Styling
 }
 
 
+
 /* #########################
 Responsive Media 
 ########################## */
 @media (max-width: 1500px) {
     .auto-container {
-        max-width: 87vw !important;
-        margin-left: 12vw !important;
+        max-width: 88vw !important;
+        margin-left: 11vw !important;
     }
 
     /* Aside Bar Styling */
     #aside {
         max-width: 12vw;
     }
-
-    /* Showcase */
-    #showcase {
-        padding-left: 0vw;
-    }
 }
 
 @media (max-width: 1200px) {
     .auto-container {
-        max-width: 84vw !important;
-        margin-left: 14.5vw !important;
+        max-width: 85vw !important;
+        margin-left: 14vw !important;
     }
 
     /* Aside Bar Styling */
     #aside {
         max-width: 15vw;
-    }
-
-    /* Showcase */
-    #showcase {
-        padding-left: 0vw;
     }
 }
 
@@ -589,27 +453,6 @@ Responsive Media
     .nav-search-box input {
         display: none;
     }
-
-    /* Categories Section */
-    .chips-category .showcase-content button,
-    .corn-curls-category .showcase-content button {
-        position: absolute;
-        bottom: 12%;
-        right: 8%;
-        transform: translate(10%, -20%);
-    }
-
-    #categories .chips-category,
-    #categories .corn-curls-category,
-    #categories .snack-category,
-    #categories .drink-category {
-        padding: 2rem 1rem;
-    }
-
-    .chips-category .item img,
-    .corn-curls-category .item img {
-        padding: 0rem;
-    }
 }
 
 @media (max-width: 576px) {
@@ -655,7 +498,6 @@ Responsive Media
 }
 
 @media (max-width: 576px) {
-
     /* Aside Bar */
     #aside {
         position: fixed;

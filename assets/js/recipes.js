@@ -2,24 +2,21 @@ AOS.init();
 
 // Variables
 const productElem = document.querySelector("#products .row");
-const bannerTitle = document.querySelector("#bannerTitle");
 
 // Function To Display Category Wise Products
 const handleProducts = (products) => {
-    const filteredProducts = products.filter((product) => product.category === categoryURL.replace("-", " "));
-    bannerTitle.innerText = filteredProducts.length > 0 ? filteredProducts[0].category[0].toUpperCase() + filteredProducts[0].category.slice(1) : "Coming Soon";
-    
+    const filteredProducts = products.filter((product) => product.id < 4);
     if (filteredProducts.length > 0) {
         filteredProducts.map((product) => {
             productElem.innerHTML += `
-                <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="product-content">
+                <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="product-content card">
                         <img src="${product.thumbnail}" alt="">
-                        <div class="product-info">
+                        <div class="card-body">
                             <div class="bd-txt">
                                 <h5>${product.title}</h5>
                                 <div class="text-end">
-                                    <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">View Product</a>
+                                    <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">Read More</a>
                                 </div>
                             </div>
                         </div>

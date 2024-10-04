@@ -1,14 +1,7 @@
 // Get Params
-const categoryURL = window.location.search.slice(10);
+const categoryURL = window.location.search.slice(10).replace("_", " ");
 
-// List Categories
-const categories = [
-    { category: "Chips", slug: "chips" },
-    { category: "Corns", slug: "corns" },
-    { category: "Snacks", slug: "snacks" },
-    { category: "Soft Drinks", slug: "soft-drinks" },
-    { category: "Papers", slug: "papers" },
-]
+
 
 
 // Icons Related To Each Category
