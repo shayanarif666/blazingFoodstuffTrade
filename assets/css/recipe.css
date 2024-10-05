@@ -500,4 +500,9 @@ Responsive Media
         height: 100%;
         overflow: hidden;
     }
+    /* Products */
+    #products .container {
+        background-color: #fff;
+        padding: 2rem;
+    }
 }

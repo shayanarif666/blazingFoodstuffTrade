@@ -2,8 +2,6 @@
 const categoryURL = window.location.search.slice(10).replace("_", " ");
 
 
-
-
 // Icons Related To Each Category
 const categoryIcons = {
     chips: "./assets/images/crisps.png",

@@ -20,7 +20,6 @@ $('#showcase .owl-carousel').owlCarousel({
     }
 })
 
-
 // Function To Display Slider Cards
 const handleSliderCards = () => {
     products.map((product) => {
@@ -38,7 +37,6 @@ const handleSliderCards = () => {
             </div>
         `
         const cardContainer = document.querySelector(`#${product.category.replace(" ", "-")}-items`);
-        console.log(cardContainer, product.category)
 
         // Check if the container exists
         if (cardContainer) {
@@ -71,3 +69,4 @@ const handleSliderCards = () => {
 
 // Loading Window
 window.addEventListener("load", handleSliderCards);
+

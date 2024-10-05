@@ -2,32 +2,37 @@ AOS.init();
 
 // Variables
 const productElem = document.querySelector("#products .row");
+const bannerTitle = document.querySelector("#bannerTitle");
+
+const query = window.location.search.slice(8);
 
 // Function To Display Category Wise Products
 const handleProducts = (products) => {
-    const filteredProducts = products.filter((product) => product.id < 4);
+    const filteredProducts = products.filter((product) => product.category === query.replace("_", " ") || product.title.toLowerCase().includes(query));
+
     if (filteredProducts.length > 0) {
         filteredProducts.map((product) => {
             productElem.innerHTML += `
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="product-content card">
+                <div class="col-xl-3 col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="product-content">
                         <img src="${product.thumbnail}" alt="">
-                        <div class="card-body shadow-sm m-sm-3">
+                        <div class="product-info">
                             <div class="bd-txt">
                                 <h5>${product.title}</h5>
                                 <div class="text-end">
-                                    <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">Read More</a>
+                                    <a href="productDetail.html?id=${product.id}" class="btn-main text-decoration-none">View Product</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             `
-        } 
-    )} else {
+        }
+        )
+    } else {
         productElem.innerHTML = `
-        <div class="col-12">
-            <img src="./assets/images/Banner/coming soon banner.png" style="width:100%; height: "100%" alt="">
+        <div class="col-12 text-center">
+            <p class="text-dark">No Items Found</p>
         </div>
     `
     }

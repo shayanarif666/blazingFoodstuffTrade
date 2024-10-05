@@ -273,7 +273,7 @@ Navbar Aside Styling
 }
 
 .nav-aside-tab .search-box input::placeholder {
-    color: #999;
+    color: #999 !important;
 }
 
 /* ##########################
