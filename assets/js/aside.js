@@ -5,9 +5,9 @@ const navAsideTab = document.querySelector("#navAsideTab")
 const navCloseTab = document.querySelector("#navCloseTab");
 const asideTab = document.querySelector("#asideTab");
 const closeTab = document.querySelector("#closeTab");
-const mobileMenuBar = document.querySelector("#mobileMenu");
+const menuBar = document.querySelector("#mobileMenu");
 const asideBar = document.querySelector("#aside");
-let isAsideOpen = false;
+let isAsideOpen = true;
 
 // Function To Toggle Aside Menu Tab
 const toggleMenu = (menuElement, shouldShow) => {
@@ -31,4 +31,4 @@ asideMenuTab.addEventListener("click", () => toggleMenu(asideTab, true));
 navAsideMenuTab.addEventListener("click", () => toggleMenu(navAsideTab, true));
 closeTab.addEventListener("click", () => toggleMenu(asideTab, false));
 navCloseTab.addEventListener("click", () => toggleMenu(navAsideTab, false));
-mobileMenuBar.addEventListener("click", () => handleAsideBar(isAsideOpen));
+menuBar.addEventListener("click", () => handleAsideBar(isAsideOpen));
