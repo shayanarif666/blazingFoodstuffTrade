@@ -33,6 +33,7 @@ Utilities
     background-size: cover !important;
 }
 
+
 /* #########################
 Buttons Styling
 ######################### */
@@ -79,8 +80,22 @@ Aside Bar Styling
     align-items: center;
     justify-content: space-between;
     padding: 2rem 0;
-    z-index: 9 !important;
+    z-index: 999 !important;
     transition: all .4s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#aside::-webkit-scrollbar {
+    width: 4px;
+}
+
+#aside::-webkit-scrollbar-track {
+    background: #333;
+}
+
+#aside::-webkit-scrollbar-thumb {
+    background: #444;
 }
 
 #aside .aside-menu {
@@ -144,8 +159,8 @@ Aside Bar Styling
 }
 
 .aside-tab {
-    position: absolute;
-    left: 100%;
+    position: fixed;
+    left: 8%;
     top: 0%;
     width: 800px;
     height: 700px;
@@ -157,6 +172,7 @@ Aside Bar Styling
     transition: all .4s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    z-index: 99;
 }
 
 .close-tab i {
@@ -362,6 +378,11 @@ Responsive Media
         max-width: 88vw !important;
         margin-left: 11vw !important;
     }
+    .aside-tab {
+        position: fixed;
+        left: 12%;
+        top: 0%;
+    }
 
     /* Aside Bar Styling */
     #aside {
@@ -373,6 +394,11 @@ Responsive Media
     .auto-container {
         max-width: 85vw !important;
         margin-left: 14vw !important;
+    }
+    .aside-tab {
+        position: fixed;
+        left: 15%;
+        top: 0%;
     }
 
     /* Aside Bar Styling */

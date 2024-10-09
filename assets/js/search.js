@@ -32,7 +32,7 @@ const handleProducts = (products) => {
     } else {
         productElem.innerHTML = `
         <div class="col-12 text-center">
-            <p class="text-dark">No Items Found</p>
+            <p class="text-dark py-5">No Items Found In Search Result</p>
         </div>
     `
     }

@@ -32,6 +32,17 @@ Utilities
     background-repeat: no-repeat !important;
     background-size: cover !important;
 }
+#aside::-webkit-scrollbar {
+    width: 4px;
+}
+
+#aside::-webkit-scrollbar-track {
+    background: #333;
+}
+
+#aside::-webkit-scrollbar-thumb {
+    background: #444;
+}
 
 /* #########################
 Buttons Styling

@@ -11,6 +11,7 @@ let isAsideOpen = false;
 
 // Function To Toggle Aside Menu Tab
 const toggleMenu = (menuElement, shouldShow) => {
+    menuElement.style.width = shouldShow ? "800px" : "0px"
     menuElement.style.opacity = shouldShow ? 1 : 0;
     menuElement.style.visibility = shouldShow ? "visible" : "hidden";
 };

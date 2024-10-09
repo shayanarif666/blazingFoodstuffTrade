@@ -1,7 +1,6 @@
 .auto-container {
-    max-width: 91vw;
-    width: 100%;
-    margin-left: 8vw;
+    width: 92vw;
+    transform: translateX(7vw) !important;
 }
 
 /* #######################
@@ -42,9 +41,11 @@ Buttons Styling
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 .btn-main:hover {
     background-color: #ff1500 !important;
 }
+
 /* #########################
 Logo Styling
 ######################### */
@@ -63,21 +64,33 @@ Logo Styling
 /* ##########################
 Aside Bar Styling
 ########################## */
+#aside::-webkit-scrollbar {
+    width: 1px;
+}
+
+#aside::-webkit-scrollbar-track {
+    background: #333;
+}
+
+#aside::-webkit-scrollbar-thumb {
+    background: #333;
+}
 #aside {
-    max-width: 8vw;
-    width: 100%;
+    width: 7vw;
     position: fixed;
     top: 0%;
     left: 0%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--txt-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 2rem 0;
-    z-index: 9 !important;
+    z-index: 999 !important;
     transition: all .4s ease-in-out;
+    overflow-y: scroll;
+    overflow-x: hidden !important;
 }
 
 #aside .aside-menu {
@@ -96,6 +109,7 @@ Aside Bar Styling
 .aside-categories a {
     text-decoration: none !important;
 }
+
 .aside-categories .category-menu {
     text-align: center;
     padding: 1rem 2.5rem;
@@ -141,11 +155,11 @@ Aside Bar Styling
 }
 
 .aside-tab {
-    position: absolute;
-    left: 100%;
+    position: fixed;
+    left: 7%;
     top: 0%;
-    width: 800px;
-    height: 700px;
+    width: 0px;
+    height: 650px;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     z-index: 0;
@@ -154,6 +168,8 @@ Aside Bar Styling
     transition: all .4s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    z-index: 99;
+    transition: all .3s ease-in-out;
 }
 
 .close-tab i {
@@ -204,7 +220,7 @@ Navbar Styling
 ########################## */
 #navbar {
     background-color: var(--txt-dark);
-    padding: .5rem 1.5rem .5rem 0;
+    padding: .5rem 1.5rem .5rem 1rem;
     position: relative;
 }
 
@@ -246,7 +262,7 @@ Navbar Aside Styling
     left: 0%;
     top: 100%;
     width: 100%;
-    height: 700px;
+    height: 400px !important;
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     z-index: 0;
@@ -254,6 +270,7 @@ Navbar Aside Styling
     transition: all .4s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    overflow-y: scroll;
 }
 
 .nav-aside-tab .close-tab i {
@@ -285,8 +302,9 @@ Showcase Section Styling
 }
 
 #showcase .item {
-    height: 800px;
+    height: 650px;
     width: 100%;
+    padding: 0 1rem;
 }
 
 #showcase .item-one {
@@ -351,7 +369,7 @@ Categories Section Styling
 #categories {
     background-color: lightgoldenrodyellow;
     height: 100%;
-    padding: 5rem 0 2rem;
+    padding: 5rem 2rem 2rem;
 }
 
 #categories .chips-category,
@@ -511,42 +529,62 @@ Responsive Media
 ########################## */
 @media (max-width: 1500px) {
     .auto-container {
-        max-width: 87vw !important;
-        margin-left: 12vw !important;
+        width: 91vw !important;
+        transform: translateX(9%) !important;
+    }
+    .aside-tab {
+        position: fixed;
+        left: 9%;
+        top: 0%;
     }
 
     /* Aside Bar Styling */
     #aside {
-        max-width: 12vw;
+        width: 9vw;
     }
 
     /* Showcase */
     #showcase {
         padding-left: 0vw;
+    }
+
+    #showcase .item {
+        height: 500px;
+        width: 100%;
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (orientation: landscape) {
     .auto-container {
-        max-width: 84vw !important;
-        margin-left: 14.5vw !important;
+        width: 90vw !important;
+        transform: translateX(10%) !important;
+    }
+    .aside-tab {
+        position: fixed;
+        left: 10%;
+        top: 0%;
     }
 
     /* Aside Bar Styling */
     #aside {
-        max-width: 15vw;
+        width: 10vw !important;
     }
 
     /* Showcase */
     #showcase {
         padding-left: 0vw;
+    }
+
+    #showcase .item {
+        height: 450px;
+        width: 100%;
     }
 }
 
 @media (max-width: 991px) {
     .auto-container {
-        max-width: 100vw !important;
-        margin: 0vw !important;
+        width: 100vw !important;
+        transform: translateX(0%) !important;
     }
 
     /* Aside Bar */
@@ -569,6 +607,12 @@ Responsive Media
     }
 
     .search-box input {
+        width: 100%;
+    }
+
+    /* Showcase */
+    #showcase .item {
+        height: 450px;
         width: 100%;
     }
 }
@@ -610,6 +654,12 @@ Responsive Media
     .corn-curls-category .item img {
         padding: 0rem;
     }
+
+    /* Showcase */
+    #showcase .item {
+        height: 450px;
+        width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -621,7 +671,7 @@ Responsive Media
         top: 0%;
         z-index: 999 !important;
         padding: .5rem 0;
-        min-width: 25vw;
+        min-width: 22vw;
     }
 
     /* Navbar Styling */
@@ -654,7 +704,7 @@ Responsive Media
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
 
     /* Aside Bar */
     #aside {
@@ -663,8 +713,24 @@ Responsive Media
         top: 0%;
         z-index: 999 !important;
         padding: .5rem 0;
-        min-width: 35vw;
+        width: 25vw;
         height: 100%;
-        overflow: hidden;
+    }
+
+    /* Showcase */
+    #showcase .item {
+        height: 450px;
+        width: 100%;
+    }
+    .showcase-content span {
+        color: var(--txt-red);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bolder;
+        font-size: 2.8rem !important;
+    }
+
+    /* Categories */
+    #categories {
+        padding: 1rem 1.5rem 1rem 1rem !important;
     }
 }
