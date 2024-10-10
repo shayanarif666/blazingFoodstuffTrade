@@ -6,7 +6,7 @@ $('#showcase .owl-carousel').owlCarousel({
     nav: false,
     autoplay: true,
     smartSpeed: 1000,
-    autoplayTimeout: 3700,
+    autoplayTimeout: 3500,
     responsive: {
         0: {
             items: 1

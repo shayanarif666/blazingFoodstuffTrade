@@ -511,6 +511,7 @@ Footer Styling
     color: #e52614;
     font-size: 3rem;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .footer-content .social-icons i {
@@ -558,7 +559,7 @@ Responsive Media
     }
 }
 
-@media (max-width: 1200px) and (orientation: landscape) {
+@media (max-width: 1200px) {
     .auto-container {
         width: 90vw !important;
         transform: translateX(10%) !important;
@@ -736,5 +737,10 @@ Responsive Media
     /* Categories */
     #categories {
         padding: 1rem 1.5rem 1rem 1rem !important;
+    }
+
+    /* Footer */
+    .footer-content .brands img {
+        width: 90%;
     }
 }

@@ -8,13 +8,13 @@ const productDetails = document.querySelector("#productDetails .row");
 const handleProductDetails = (id) => {
     const findProduct = products.find((product) => product.id === parseInt(id));
     productDetails.innerHTML = `
-       <div class="col-lg-6">
+       <div class="col-md-6">
             <div class="product-img">
                 <img src="${findProduct.thumbnail}"
                     alt="">
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
                         <div class="product-info">
                             <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
