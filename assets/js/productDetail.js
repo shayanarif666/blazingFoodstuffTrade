@@ -3,10 +3,14 @@ const id = window.location.search.slice(4);
 
 // Variables
 const productDetails = document.querySelector("#productDetails .row");
+const bannerTitle = document.querySelector("#bannerTitle");
+const productTitle = document.querySelector("#productTitle");
 
 // Function To Handle Product Details
 const handleProductDetails = (id) => {
     const findProduct = products.find((product) => product.id === parseInt(id));
+    bannerTitle.innerText = findProduct.category[0].toUpperCase() + findProduct.category.slice(1);
+    productTitle.innerText = findProduct.title;
     productDetails.innerHTML = `
        <div class="col-md-6">
             <div class="product-img">
