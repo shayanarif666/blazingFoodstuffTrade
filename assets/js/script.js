@@ -1,12 +1,13 @@
 AOS.init();
 
-$('#showcase .owl-carousel').owlCarousel({
+// Slider Controller
+let owl = $('#showcase .owl-carousel').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
     autoplay: true,
     smartSpeed: 1000,
-    autoplayTimeout: 3500,
+    autoplayTimeout: 7000,
     responsive: {
         0: {
             items: 1
@@ -19,6 +20,7 @@ $('#showcase .owl-carousel').owlCarousel({
         }
     }
 })
+
 
 // Function To Display Slider Cards
 const handleSliderCards = () => {
