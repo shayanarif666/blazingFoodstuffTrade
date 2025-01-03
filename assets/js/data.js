@@ -56,7 +56,7 @@ const products = [
     },
     {
         id: 7,
-        title: "Tasty Chips",
+        title: "Nano Mix Chips",
         description: "Fresh Potato Chips With Chilli Flavour",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
         thumbnail: "https://www.alishaihani.net/storage/files/nano_3.jpg",
@@ -65,48 +65,111 @@ const products = [
     },
     {
         id: 8,
-        title: "Cafe Buisket",
+        title: "Pofak Oman",
         description: "Fresh Potato Chips With Chilli Flavour",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
         thumbnail: "https://www.alishaihani.net/storage/files/pofak-oman_10.jpg",
         category: "corns",
-        brand: "Mayfair"
+        brand: "Pofak Oman"
     },
     {
         id: 9,
-        title: "Sooper Buisket",
+        title: "Majid Crispy",
         description: "Fresh Potato Chips With Chilli Flavour",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
         thumbnail: "https://www.alishaihani.net/storage/files/majid-crisoy_3.jpg",
         category: "corns",
-        brand: "Peekfreens"
+        brand: "Majid Crispy"
     },
     {
         id: 10,
-        title: "Coca Cola 1.5L",
+        title: "Majid Oman",
         description: "Fresh Potato Chips With Chilli Flavour",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
-        thumbnail: "https://www.alishaihani.net/storage/files/shami-strwberry_2.jpg",
-        category: "soft drinks",
-        brand: "Coke"
+        thumbnail: "https://www.alishaihani.net/storage/files/majidoman_5.jpg",
+        category: "corns",
+        brand: "Majid Oman"
     },
     {
         id: 11,
-        title: "Red String",
-        description: "Fresh Potato Chips With Chilli Flavour",
+        title: "Pofak Khaligee",
+        description: "https://www.alishaihani.net/storage/files/pofak-khaligee_8.jpg",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
-        thumbnail: "https://www.alishaihani.net/storage/files/fizi-tango_2.jpg",
-        category: "soft drinks",
-        brand: "String"
+        thumbnail: "https://www.alishaihani.net/storage/files/pofak-khaligee_8.jpg",
+        category: "corns",
+        brand: "Pofak Khaligee"
     },
     {
         id: 12,
-        title: "Snack Pack",
+        title: "Cheesar",
         description: "Fresh Potato Chips With Chilli Flavour",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/cheeser_8.jpg",
+        category: "corns",
+        brand: "Cheesar"
+    },
+    {
+        id: 13,
+        title: "Shami Strawberry",
+        description: "Fresh Flavours strawberry milk etc",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/shami-strwberry_2.jpg",
+        category: "soft drinks",
+        brand: "Shami Strawberry"
+    },
+    {
+        id: 14,
+        title: "Fizzi Tango",
+        description: "Fresh Flavours orange",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/fizi-tango_2.jpg",
+        category: "soft drinks",
+        brand: "Fizzi Tango"
+    },
+    {
+        id: 15,
+        title: "Shami Mix Fruit",
+        description: "Fresh Flavours orange, apple, pineapples etc",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/shami-mixe-fruti_2.jpg",
+        category: "soft drinks",
+        brand: "Shami Mix Fruit"
+    },
+    {
+        id: 16,
+        title: "Shami Lemon",
+        description: "Fresh Flavours lemon etc",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/shami-limin_2.jpg",
+        category: "soft drinks",
+        brand: "Shami Lemon"
+    },
+    {
+        id: 17,
+        title: "Ringo Snacks",
+        description: "Fresh Flavours lemon etc",
         specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
         thumbnail: "https://www.alishaihani.net/storage/files/ringo_6.jpg",
         category: "snacks",
-        brand: "Sara Snack"
+        brand: "Ringo Snacks"
+    },
+    {
+        id: 18,
+        title: "Sara Snacks",
+        description: "Fresh Flavours lemon etc",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/sara-snacks_1.jpg",
+        category: "snacks",
+        brand: "Sara Snacks"
+    },
+    {
+        id: 18,
+        title: "Sara Snacks",
+        description: "Fresh Flavours lemon etc",
+        specification: ["14 Pkt x 22 gm / Box", "20 Pkt x 22 gm / Bag", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn", "50 Pkt x 15 gm / Ctn"],
+        thumbnail: "https://www.alishaihani.net/storage/files/sara-snacks_1.jpg",
+        category: "snacks",
+        brand: "Sara Snacks"
     }
 ]
 
